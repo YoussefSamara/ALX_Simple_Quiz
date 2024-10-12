@@ -1,8 +1,8 @@
 const correctAnswer = "4"; // الإجابة الصحيحة
+// الحصول على الاختيار الذي قام به المستخدم
+const userAnswer = document.querySelector('input[name="quiz"]:checked');
 function checkAnswer() {
 
-    // الحصول على الاختيار الذي قام به المستخدم
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
 
     // التأكد من أن المستخدم قام باختيار إجابة
     if (!userAnswer) {
