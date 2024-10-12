@@ -1,8 +1,8 @@
+const correctAnswer = "4"; // الإجابة الصحيحة
+// الحصول على الاختيار الذي قام به المستخدم
+const userAnswer = document.querySelector('input[name="quiz"]:checked');
+const selectedValue = userAnswer.value;
 function checkAnswer() {
-    const correctAnswer = "4"; // الإجابة الصحيحة
-
-    // الحصول على الاختيار الذي قام به المستخدم
-    const userAnswer = document.querySelector('input[name="quiz"]:checked');
 
     // التأكد من أن المستخدم قام باختيار إجابة
     if (!userAnswer) {
@@ -11,7 +11,6 @@ function checkAnswer() {
     }
 
     // تخزين القيمة التي اختارها المستخدم في متغير
-    const selectedValue = userAnswer.value;
 
     // مقارنة القيمة التي اختارها المستخدم مع الإجابة الصحيحة
     if (selectedValue === correctAnswer) {
