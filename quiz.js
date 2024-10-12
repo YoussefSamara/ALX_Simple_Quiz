@@ -1,18 +1,16 @@
-// Function to check the user's answer
 function checkAnswer() {
-  // Correct answer is "4"
-  const correctAnswer = "4";
+  const correctAnswer = "4";  // الإجابة الصحيحة
 
-  // Retrieve the user's selected answer
+  // الحصول على الاختيار الذي قام به المستخدم
   const userAnswer = document.querySelector('input[name="quiz"]:checked');
 
-  // If no option is selected
+  // التأكد من أن المستخدم قام باختيار إجابة
   if (!userAnswer) {
       document.getElementById('feedback').textContent = "Please select an answer.";
       return;
   }
 
-  // Compare the user's answer with the correct one
+  // مقارنة القيمة التي اختارها المستخدم مع الإجابة الصحيحة
   if (userAnswer.value === correctAnswer) {
       document.getElementById('feedback').textContent = "Correct! Well done.";
   } else {
@@ -20,5 +18,5 @@ function checkAnswer() {
   }
 }
 
-// Add event listener to the "Submit Answer" button
+// إضافة حدث عند النقر على الزر لتنفيذ الوظيفة
 document.getElementById('submit-answer').addEventListener('click', checkAnswer);
